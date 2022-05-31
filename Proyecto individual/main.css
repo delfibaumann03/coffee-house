@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
+:root {
+  --lightblue: #9abec1;
+  --black: #000000;
+  --blue: rgb(12, 63, 118);
+  --white: rgb(255, 255, 255);
+}
+
+*{
+  font-family: "Josefin Sans", sans-serif,"caveat";
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+html{
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+  background: var(--white);
+  border-radius: 5rem;
+}
+.hero{
+  padding:1rem 7%;
+  background-color:var(--black);
+  max-height: 80vh;
+  z-index: 99;
+}
+.nav {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0%;
+  position: fixed;
+  width: 80%;
+  top: 0; right: 0; left: 0;
+  z-index: 7;
+}
+.logo {
+    display: flex;
+    align-items:center;
+    text-align: center;
+    font-weight: 700;
+    text-transform:uppercase;
+    color:var(--white);
+    cursor:default;
+}
+.logo .dot {
+    display:inline-block;
+    height: 0.5rem;
+    width: 0.5rem;
+    margin: 0.4rem;
+    background: var(--blue);
+    border-radius: 60%;
+}
+.nav-links {
+    display:flex;
+    float: right;
+    margin-top: 1%;
+}
+.nav-links a {
+    color: var(--white);
+    text-decoration:none;
+    margin-right:1em;
+}
+  a:hover {
+    color: var(--blue);
+}
+.nav-links a::after {
+    content: "";
+    display:block;
+    height: 18.75%;
+    background:var(--black);
+    width: 0%;
+    transition: all ease-in-out 300ms;
+}
+.nav-links a:hover::after {
+    width: 100%;
+    background:var(--blue);
+}
+#home{
+  min-height: 100vh;
+  align-items: center;
+  background-image: url("home-img.jpg");
+  background-size:auto;
+  background-position: center;
+}
+#home .intro {
+  position: absolute;
+  z-index: 1;
+  float: initial;
+}
+#home .intro h1{
+  font-size: 400%;
+  color:var(--white);
+  margin-left: 10rem;
+  margin-top: 5rem;
+}
+#home .intro button {
+  margin-left: 11rem;
+  background-color:var(--blue);
+  cursor: pointer;
+  padding: 0.7rem 1rem;
+  border-radius: 15%;
+}
+#home .intro button a{
+  color: var(--white);
+  text-decoration: none;
+}
+#home .intro button:hover{
+  letter-spacing: .2rem;
+}
+#home .intro .text {
+  color: var(--lightblue);
+  font-size: 150%;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 11rem;
+}
+#Shops{
+  background-image: url("bg1.jpg");
+  background-size:contain;
+}
+.heading1{
+  color:var(--white);
+  text-align: center;
+  text-transform: uppercase;
+  font-style: oblique;
+  padding-bottom: 2.5rem;
+  padding-top: 2rem;
+  font-size: 3rem;
+  text-decoration: underline;
+  text-decoration-color: var(--lightblue);
+}
+.heading1 span{
+  color: var(--lightblue);
+}
+#Shops .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 0fr));
+  gap:1.5rem;
+}
+
+#Shops .box-container .box{
+  padding:5rem;
+  text-align: center;
+  border:var(--border);    
+}
+
+#Shops .box-container .box img{
+  height: 8rem;
+}
+
+#Shops .box-container .box h3{
+  color: #fff;
+  font-size: 2rem;
+  padding:1rem 0;
+}
+
+#Shops .box-container .box:hover{
+  background:#fff;
+}
+
+#Shops .box-container .box:hover > *{
+  color:var(--black);
+}
+.btn{
+  display: inline-block;
+  color: var(--black);
+  border-radius: 3px;
+  background-color:var(--lightblue);
+  width: 100px;
+  height: 20px;
+}
+
+#Coffee-Lovers{
+background-image: url("bgcl.jpg");
+}
+.heading2 span{
+  color: rgb(139, 15, 15);
+}
+.heading2{
+  color: var(--lightblue);
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-size: 4rem;
+}
+.heading3 span{
+  color: rgb(139, 15, 15);
+}
+.heading3{
+  color: var(--lightblue);
+  text-align: center;
+  padding-bottom: 3.5rem;
+  font-size: 4rem;
+}
+.carrusel{
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  padding-top: 3%;
+ 
+}
+
+.carrusel #fotos{
+  display: flex;
+  animation: cambio 20s infinite alternate linear;
+  width: 400%;   
+}
+
+.carrusel li{
+  width: 50%;
+  list-style: none;
+}
+.carrusel img{
+  width: 80%;
+  height: 60%;
+}
+
+@keyframes cambio{
+  0%{margin-left: 0;}
+  20%{margin-left: 0;}
+
+  25%{margin-left: -100%;}
+  45%{margin-left: -100%;}
+
+  50%{margin-left: -200%;}
+  70%{margin-left: -200%;}
+
+  75%{margin-left: -300%;}
+  100%{margin-left: -300%;}
+}
+#Coffee-Lovers .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap:1.5rem;
+}
+
+.signform{
+  background-image: url("bg2.jpg");
+}
+.form-register{
+  width: 400px;
+  flex-wrap: wrap;
+  min-width: 250px;
+  padding: 30px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 4px;
+  font-family: 'Raleway';
+  color: #fff;
+}
+
+.form-register h9{
+  flex-wrap: wrap;
+  min-width: 250px;
+  font-size: 200%;
+  margin-bottom: 50px;
+}
+
+.controls {
+  flex-wrap: wrap;
+  min-width: 250px;
+  margin-top: 3%;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 5%;
+}
+
+.form-register p {
+  flex-wrap: wrap;
+  min-width: 250px;
+  margin-top: 5%;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.form-register a:hover {
+  font-family: 'Raleway';
+  color:#fff ;
+  text-decoration: underline;
+ 
+}
+
+.texto{
+  color: #fff;
+  font-weight: 600;
+  flex-wrap: wrap;
+  min-width: 250px;
+ 
+}
+
+.form-register .botons{
+ flex-wrap: wrap;
+ min-width: 250px;
+ min-height: 30px;
+ font-size: 16px;
+ margin-top: 1px;
+ margin-bottom: 1px;
+ margin-left: 2rem;
+ background-color: var(--blue);
+ color: var(--white);
+ cursor: pointer;
+}
+.form-register .botons :hover{
+  background-color: rgb(13, 13, 61);
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+
+  html{
+      font-size: 58%;
+  }
+
+  .hero{
+      padding:2rem 2rem;
+      font-size: 100%;
+      z-index: 99;
+  }
+}
+
+@media (max-width:570px){
+ .hero{
+  z-index: 99;
+  padding:2rem 2rem;
+ }
+ .logo{
+  display: flex;
+  position: fixed;
+  z-index: 99;
+ }
+ 
+  .nav-links a {
+    display:inline-block;
+    margin: 0;
+  }
+
+  #home{
+      background-position: center;
+      background-size:auto ;
+      text-align: center;
+  }
+
+  #home .content h1{
+      font-size: 4.5rem;
+  }
+}
